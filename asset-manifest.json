@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Domore/static/css/main.377967d3.css",
-    "main.js": "/Domore/static/js/main.caa8cb84.js",
+    "main.js": "/Domore/static/js/main.30b1728a.js",
     "static/media/logo.svg": "/Domore/static/media/logo.0880d5e0e57b1dc0e8f635006ef7dc67.svg",
     "index.html": "/Domore/index.html",
     "static/media/trash.svg": "/Domore/static/media/trash.4224618ca8de3955d817f3eda87b69b7.svg",
     "static/media/check.svg": "/Domore/static/media/check.ff371676379dca131ec92651f87bac4e.svg",
     "main.377967d3.css.map": "/Domore/static/css/main.377967d3.css.map",
-    "main.caa8cb84.js.map": "/Domore/static/js/main.caa8cb84.js.map"
+    "main.30b1728a.js.map": "/Domore/static/js/main.30b1728a.js.map"
   },
   "entrypoints": [
     "static/css/main.377967d3.css",
-    "static/js/main.caa8cb84.js"
+    "static/js/main.30b1728a.js"
   ]
 }
