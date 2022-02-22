@@ -1,38 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 .App {
+  max-width: 1260px;
+  padding: 40px 80px;
+  margin: 0 auto;
+}
+
+#root {
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 90px;
   text-align: center;
+  word-wrap: break-word;
+  max-width: 30ch;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-input {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"] {
+  width: 450px;
+  height: 40px;
+  padding: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 20px;
+}
+input[type="button"] {
+  width: 350px;
+  height: 42px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 6px;
+  border: none;
 }
 
-@keyframes App-logo-spin {
+.Header .logo {
+  width: 232px;
+  height: 100px;
+}
+
+.Tasks {
+  background-color: #000;
+  color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  animation: dash 0.3s forwards;
+  box-shadow: 2px 2px 2px 2px black;
+}
+
+@keyframes dash {
   from {
-    transform: rotate(0deg);
+    transform: translate(-50%);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+.Tasks img {
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 580px) {
+  h1 {
+    font-size: 30px;
+    max-width: 20ch;
   }
 }
