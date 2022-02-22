@@ -12,23 +12,18 @@ function App() {
   function handleClick() {
     const inputValor = input;
 
-    if (inputValor === "") {
-      return;
-    }
+    if (inputValor === "") return;
+    console.log(inputValor);
 
-    setTasks([...tasks, inputValor]);
     setInput("");
+    setTasks([...tasks, inputValor]);
   }
-
-  document.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      setPending(pending + 1);
-      handleClick();
-    }
-  });
 
   React.useEffect(() => {
     document.title = "(" + pending + ") tarefas pendentes";
+    if (pending === 0) {
+      document.title = "Do More - To do list";
+    }
   }, [pending]);
 
   React.useEffect(() => {
@@ -64,7 +59,9 @@ function App() {
           type="button"
           value="Add a Task"
           onClick={(e) => {
-            setPending(pending + 1);
+            if (input !== "") {
+              setPending(pending + 1);
+            }
             handleClick(e);
           }}
         />
@@ -72,7 +69,14 @@ function App() {
 
       <div className="task-container">
         {tasks.map((task, index) => (
-          <Tasks key={index} tasks={task} count={count} setCount={setCount} />
+          <Tasks
+            key={index}
+            tasks={task}
+            count={count}
+            setCount={setCount}
+            pending={pending}
+            setPending={setPending}
+          />
         ))}
       </div>
     </div>
